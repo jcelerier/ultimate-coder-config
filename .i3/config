@@ -7,8 +7,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 bindsym $mod+Return exec urxvtc
+bindsym $mod+t exec scripts/dmenu-terminal.sh
 bindsym $mod+c exec urxvtc -e bc -l
-bindsym $mod+w exec uzbl
+bindsym $mod+w exec scripts/dmenu-sr.sh
 bindsym $mod+n exec noblenote
 bindsym $mod+Shift+A kill
 
@@ -135,13 +136,13 @@ bar {
         status_command python3 ~/.i3/status.py
         colors {
             background #073642
-            statusline #eee8d5
-            focused_workspace #cb4b16 #cb4b16 #eee8d5
-            active_workspace #cb4b16 #cb4b16 #eee8d5
-            inactive_workspace #b58900 #b58900 #eee8d5
+            statusline #002b36
+            focused_workspace #657b83 #839496 #eee8d5
+            active_workspace #657b83 #839496 #eee8d5
+            inactive_workspace #657b83 #586e75 #eee8d5
         }
 }
 
-client.focused          #859900 #859900 #fdf6e3 #2e9ef4
-client.focused_inactive #268bd2 #268bd2 #fdf6e3 #484e50
-client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
+client.focused          #657b83 #839496 #eee8d5 #2e9ef4
+client.focused_inactive #657b83 #586e75 #eee8d5 #586e75
+client.unfocused        #657b83 #586e75 #eee8d5 #586e75

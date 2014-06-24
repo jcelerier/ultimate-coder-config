@@ -8,7 +8,7 @@ setopt appendhistory autocd extendedglob nomatch correct print_exit_value
 unsetopt beep
 
 # Aliases
-alias present='impressive -x -W -t WipeBlobs -T 300 -c memory --nologo'
+alias present='impressive -x -W -t WipeLeft -T 200 -c memory --nologo'
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -39,3 +39,4 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-bundle olivierverdier/zsh-git-prompt
 antigen-theme blinks
 antigen apply
+
