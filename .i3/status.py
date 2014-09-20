@@ -11,8 +11,8 @@ status = Status(standalone=True)
 status.register("clock",
 	format="%a %-d %b %X",)
 
-status.register("temp",
-	format="{temp:.0f}°C",)
+#status.register("temp",
+#	format="{temp:.0f}°C",)
 
 status.register("battery",
 	format="{status} {remaining:%E%hh:%Mm}",

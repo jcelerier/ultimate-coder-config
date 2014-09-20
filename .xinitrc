@@ -1,7 +1,7 @@
 #!/bin/sh
 setxkbmap fr latin9 &
 export TERMINAL=urxvtc
-scripts/lightsensor.sh &
+# scripts/lightsensor.sh &
 i3&
 
 while true; do

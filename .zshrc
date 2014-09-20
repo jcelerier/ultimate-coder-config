@@ -1,5 +1,6 @@
-PATH=$PATH:$HOME/scripts:$HOME/.dynamic-colors/bin
-dynamic-colors init
+PATH=$PATH:$HOME/scripts
+# :$HOME/.dynamic-colors/bin
+# dynamic-colors init
 DISABLE_AUTO_UPDATE="true"
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -8,6 +9,7 @@ setopt appendhistory autocd extendedglob nomatch correct print_exit_value
 unsetopt beep
 
 # Aliases
+alias plop='echo "plopliplop"'
 alias present='impressive -x -W -t WipeLeft -T 200 -c memory --nologo'
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
@@ -24,6 +26,10 @@ alias df='df -h'
 alias du='du -h'
 alias cod='highlight -O ansi'
 alias google='sr google'
+alias gmail='mailx -A gmail'
+alias less='most'
+alias more='most'
+
 # Android development
 export ANDTOOLCHAIN=$HOME/android/android-cmake/android.toolchain.cmake
 alias android-cmake='cmake -DCMAKE_TOOLCHAIN_FILE=$ANDTOOLCHAIN'
@@ -40,3 +46,15 @@ antigen-bundle olivierverdier/zsh-git-prompt
 antigen-theme blinks
 antigen apply
 
+
+# Wayland
+if test -z "${XDG_RUNTIME_DIR}"; then
+    export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+    if ! test -d "${XDG_RUNTIME_DIR}"; then
+        mkdir "${XDG_RUNTIME_DIR}"
+        chmod 0700 "${XDG_RUNTIME_DIR}"
+    fi
+fi
+
+# Env
+export PAGER=most

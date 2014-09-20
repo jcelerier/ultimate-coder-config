@@ -1,4 +1,5 @@
 exec --no-startup-id xset dpms 100
+exec --no-startup-id scripts/create_urxvt.sh
 set $mod Mod4
 
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -6,7 +7,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec scripts/create_urxvt.sh
 bindsym $mod+t exec scripts/dmenu-terminal.sh
 bindsym $mod+c exec urxvtc -e bc -l
 bindsym $mod+w exec scripts/dmenu-sr.sh
@@ -146,3 +147,6 @@ bar {
 client.focused          #657b83 #839496 #eee8d5 #2e9ef4
 client.focused_inactive #657b83 #586e75 #eee8d5 #586e75
 client.unfocused        #657b83 #586e75 #eee8d5 #586e75
+
+assign [title="nextURxvt"] scratchpad
+

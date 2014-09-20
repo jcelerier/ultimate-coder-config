@@ -5,7 +5,7 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 
 urxvt*dynamicColors: on
-URxvt.depth: 32
+! URxvt.depth: 32
 URxvt.geometry: 90x30
 URxvt.transparent: false
 URxvt.fading: 0
@@ -30,13 +30,14 @@ URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
 
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher,clipboardpaste,vtwheel,selection-to-clipboard,urxvt-color
+URxvt.perl-ext-common: default,matcher,clipboardpaste,vtwheel,selection-to-clipboard
+! ,urxvt-color
 URxvt.matcher.button: 1
 URxvt.urlLauncher: x-www-browser
-URxvt.perl-lib: /home/doom/scripts
+! URxvt.perl-lib: /home/doom/scripts
 
-URxvt.keysym.F11: perl:urxvt-color:day
-URxvt.keysym.F12: perl:urxvt-color:night
+! URxvt.keysym.F11: perl:urxvt-color:day
+! URxvt.keysym.F12: perl:urxvt-color:night
 
 ! Cursor
 URxvt.cursorBlink: true
